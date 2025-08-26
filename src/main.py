@@ -3,9 +3,9 @@ import os
 
 def cls():
     if os.name == 'nt':
-        _ = os.system('cls')
+        os.system('cls')
     else:
-        _ = os.system('clear')
+        os.system('clear')
 
 loop = True
 
@@ -32,8 +32,15 @@ while loop == True:
         case '2':
             print('não está pronto')
         case '3':
-            print('não está pronto')
+            cls()
+            busca = input('Insira o nome do paciente a ser pesquisado: ')
+            paciente.buscar_paciente(paciente.lista_pacientes,'nome',busca)
+            input('\npressione para enter voltar')
         case '4':
             cls()
             paciente.listar_pacientes(paciente.lista_pacientes)
             input('\npressione para enter voltar')
+        case '5':
+            cls()
+            print('Encerrado!')
+            loop = False
