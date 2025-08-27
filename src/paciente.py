@@ -23,14 +23,15 @@ def adicionar_paciente(instancia_paciente):
     print('Paciente adicionado com sucesso!')
 
 def buscar_paciente(lista_pacientes,campo_buscado,valor_buscado): 
+    encontrado = False
     for paciente in lista_pacientes: 
         if getattr(paciente,campo_buscado) == valor_buscado: 
             print(f'Paciente encontrado:\nNome: {paciente.nome}\nIdade: {paciente.idade}\nTelefone: {paciente.telefone}')
-        else:
-            print('Paciente não encontrado.')
+            encontrado = True
+    if encontrado == False: print('Paciente não encontrado.')
 
 #só comentando essa parte, pois até eu me confundi enquanto fazia essa função. 
-#basicamente a função acima (buscar_paciente() usando getattr) vai esperar como parametro a lista para a busca,
+#basicamente a função acima ("buscar_paciente()" usando getattr) vai esperar como parametro a lista para a busca,
 #o campo do objeto (literalmente o campo chamado nome)
 #e o valor do campo (nesse caso o próprio nome, que será um parametro que vai vir na função)
 #Tentei sinalizar bem tudo isso, nomeando detalhadamente. Mas mesmo assim, pode ser bem confuso.
