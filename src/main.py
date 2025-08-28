@@ -30,7 +30,9 @@ while loop == True:
             paciente.adicionar_paciente(novo_paciente)
             input('\npressione para enter voltar')
         case '2':
-            print('não está pronto')
+            cls()
+            paciente.calculo_pacientes(paciente.lista_pacientes)
+            input('\npressione para enter voltar')
         case '3':
             cls()
             busca = input('Insira o nome do paciente a ser pesquisado: ')

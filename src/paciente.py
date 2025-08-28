@@ -36,4 +36,14 @@ def buscar_paciente(lista_pacientes,campo_buscado,valor_buscado):
 #e o valor do campo (nesse caso o próprio nome, que será um parametro que vai vir na função)
 #Tentei sinalizar bem tudo isso, nomeando detalhadamente. Mas mesmo assim, pode ser bem confuso.
 
-listar_pacientes(lista_pacientes)
+def calculo_pacientes(lista_pacientes):
+    idade_media = 0
+    total_pacientes = len(lista_pacientes)
+    for paciente in lista_pacientes:
+        idade_media += paciente.idade
+    if total_pacientes != 0:    
+        idade_media = idade_media / total_pacientes
+        print(f'Idade média dos pacientes cadastrados: {idade_media}')
+    print(f'Pacientes cadastrados: {total_pacientes}')
+
+calculo_pacientes(lista_pacientes)
