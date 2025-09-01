@@ -1,10 +1,10 @@
 lista_pacientes = []
 
 class Paciente:
-    def __init__(self,nome,idade,telefone):
-        self.nome = nome
-        self.idade = int(idade)
-        self.telefone = telefone
+        def __init__(self,nome,idade,telefone):
+            self.nome = nome
+            self.idade = int(idade)
+            self.telefone = telefone
 
 def listar_pacientes(lista_pacientes):
     if not lista_pacientes:

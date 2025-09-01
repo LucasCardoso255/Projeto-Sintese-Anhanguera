@@ -1,0 +1,33 @@
+Na Clínica Vida+, os pacientes são atendidos na ordem em que chegam.
+Para isso, a secretária deseja organizar os atendimentos como uma fila,
+onde o primeiro que chega é o primeiro a ser atendido.
+Construa um algoritmo em pseudocódigo que:
+1. Permita inserir 3 pacientes na fila (nome e CPF).
+2. Remova o primeiro paciente da fila para atendimento. 
+3. Mostre quem ainda está na fila após o primeiro atendimento.
+
+========================================================================================================================
+
+Algoritmo FilaPacientes
+
+Declarar Fila como lista vazia
+
+Para i de 1 até 3 faça
+    Escreva("Digite o nome do paciente: ")
+    Leia(nome)
+
+    Escreva("Digite o CPF do paciente: ")
+    Leia(cpf)
+
+    Inserir (nome, cpf) no fim da Fila
+FimPara
+
+Escreva("Atendendo o paciente: ", Fila[1].nome, " - CPF: ", Fila[1].cpf)
+Remover o primeiro elemento da Fila
+
+Escreva("Pacientes ainda aguardando:")
+Para cada paciente em Fila faça
+    Escreva(paciente.nome, " - CPF: ", paciente.cpf)
+FimPara
+
+FimAlgoritmo

@@ -46,3 +46,7 @@ while loop == True:
             cls()
             print('Encerrado!')
             loop = False
+        case _:
+            cls()
+            print('Por favor, escolha uma opção válida!')
+            input('\npressione para enter voltar')
